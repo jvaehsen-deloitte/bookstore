@@ -18,9 +18,6 @@ const getBooks = (req, res) => {
             res.status(500)
                 .json({"error":err.message})
                 .send();
-        } else if (rows.length === 0) {
-            res.status(404)
-                .send();
         } else {
             res.send(rows);
         }
